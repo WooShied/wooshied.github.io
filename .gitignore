@@ -1,0 +1,13 @@
+node_modules
+dist
+*.local
+.DS_Store
+*.zip
+.claude/
+
+# Private: audit notes, résumé corrections, GitHub cleanup list. Never publish.
+docs/
+
+# Private: the original résumé contains a phone number.
+*.pdf
+!public/resume-web.pdf
