@@ -71,6 +71,10 @@ export interface Role {
   /** primary roles get full treatment; secondary roles are shorter. */
   tier: "primary" | "secondary";
   summary: string;
+  /** What's offered (freelance roles). Shown as chips above the points. */
+  services?: string[];
+  /** Optional heading over the points, e.g. "Selected client · Name". */
+  pointsLabel?: string;
   points: string[];
   /** Measurable results. Only shown when status is "verified". */
   results?: { text: string; status: Verification }[];

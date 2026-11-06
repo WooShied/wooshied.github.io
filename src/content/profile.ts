@@ -77,7 +77,7 @@ export const profile: Profile = {
         "Platform monitoring, patching, and support; Docker and Kubernetes",
         "GitLab CI/CD pipelines with automated security checks",
       ],
-      where: "The Rosslyn Group · Comfort Cottages",
+      where: "The Rosslyn Group · Freelance clients",
       highlight: ["20% better platform security scores"],
     },
     {
@@ -103,7 +103,7 @@ export const profile: Profile = {
         "Django and Flask backends; Express hardened with Helmet",
         "Dependency scanning with OWASP Dependency-Check",
       ],
-      where: "The Rosslyn Group · Comfort Cottages",
+      where: "The Rosslyn Group · Freelance clients",
     },
     {
       id: "data",
@@ -172,16 +172,26 @@ export const profile: Profile = {
       ],
     },
     {
-      id: "comfort-cottages",
-      employer: "Comfort Cottages",
-      title: "Web Developer & Security Architect",
-      engagement: "Contract, as needed",
-      location: "Laguna Hills, CA",
+      id: "freelance",
+      employer: "Freelance",
+      title: "Full-Stack Developer & Cybersecurity Consultant",
+      engagement: "Self-employed",
+      location: "Orange County, CA",
       start: "Jul 2020",
       end: "Present",
       lane: "cyber",
-      tier: "secondary",
-      summary: "Secure, data-driven web systems for customer access, service tracking, and operations.",
+      tier: "primary",
+      summary:
+        "I design, build, and secure web systems for clients, from the database to the deploy pipeline, with security built in rather than bolted on.",
+      services: [
+        "Full-stack web apps",
+        "Backend APIs & databases",
+        "CI/CD & containers",
+        "Security reviews & hardening",
+        "Authentication & access control",
+        "Automation & data pipelines",
+      ],
+      pointsLabel: "Selected client · Comfort Cottages, Laguna Hills",
       points: [
         "Django and SQL backend tools for intake, contact tracking, and lead pipelines",
         "Docker and Kubernetes; GitLab CI/CD with automated security checks",
@@ -233,17 +243,17 @@ export const profile: Profile = {
 
     { name: "Security assessments", layer: "network", roles: ["rosslyn"] },
     { name: "Patching & monitoring", layer: "network", roles: ["rosslyn"] },
-    { name: "CI/CD security", layer: "network", roles: ["rosslyn", "comfort-cottages"] },
-    { name: "Docker & Kubernetes", layer: "network", roles: ["comfort-cottages"] },
+    { name: "CI/CD security", layer: "network", roles: ["rosslyn", "freelance"] },
+    { name: "Docker & Kubernetes", layer: "network", roles: ["freelance"] },
 
     { name: "Access control config", layer: "identity", roles: ["rosslyn"] },
     { name: "SAML & OAuth", layer: "identity", roles: ["rosslyn"] },
     { name: "Threat correlation", layer: "identity", roles: ["anduril-gsoc"] },
 
-    { name: "Python", layer: "application", roles: ["rosslyn", "comfort-cottages"] },
+    { name: "Python", layer: "application", roles: ["rosslyn", "freelance"] },
     { name: "Java & Spring Boot", layer: "application", roles: ["rosslyn"] },
     { name: "JavaScript", layer: "application", roles: ["rosslyn"] },
-    { name: "Django & SQL", layer: "application", roles: ["comfort-cottages"] },
+    { name: "Django & SQL", layer: "application", roles: ["freelance"] },
     { name: "Web infrastructure", layer: "application", roles: ["awi"] },
 
     { name: "Data protection", layer: "data", roles: ["rosslyn", "stem-heroes"] },

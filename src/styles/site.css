@@ -920,6 +920,31 @@
   font-size: var(--step-1);
 }
 
+.tl-detail__services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.tl-detail__services li {
+  padding: 5px 12px;
+  border: 1px solid color-mix(in srgb, var(--c) 40%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--c) 8%, transparent);
+  font-size: 0.85rem;
+  color: var(--fg);
+}
+
+.tl-detail__label {
+  margin-top: 18px;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
 .tl-detail__points {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

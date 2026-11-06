@@ -48,6 +48,14 @@ function Detail({ role }: { role: Role }) {
         {role.engagement ? ` · ${role.engagement}` : ""}
       </p>
       <p className="tl-detail__summary">{role.summary}</p>
+      {role.services?.length ? (
+        <ul className="tl-detail__services" aria-label="Services">
+          {role.services.map((s) => (
+            <li key={s}>{s}</li>
+          ))}
+        </ul>
+      ) : null}
+      {role.pointsLabel ? <p className="tl-detail__label">{role.pointsLabel}</p> : null}
       <ul className="tl-detail__points">
         {role.points.map((p) => (
           <li key={p}>{p}</li>
