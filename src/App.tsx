@@ -4,6 +4,7 @@ import { Hero } from "./components/Hero";
 import { Timeline } from "./components/Timeline";
 import { SkillTrace } from "./components/SkillTrace";
 import { Playground } from "./components/playground/Playground";
+import { ThreatFeed } from "./components/ThreatFeed";
 import { Toolbox } from "./components/Toolbox";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
@@ -57,6 +58,7 @@ export default function App() {
         <Timeline />
         <SkillTrace />
         <Playground />
+        <ThreatFeed />
         <Toolbox />
         <Contact />
       </main>

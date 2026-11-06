@@ -19,7 +19,7 @@ export function Toolbox() {
     <section id="toolbox" className="section" aria-labelledby="toolbox-title">
       <div className="wrap">
         <SectionHeader
-          index="04"
+          index="05"
           id="toolbox"
           title={
             <>

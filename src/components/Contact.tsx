@@ -13,7 +13,7 @@ export function Contact() {
               <i key={l.id} style={{ background: l.color }} />
             ))}
           </div>
-          <p className="card__eyebrow">05 · Say hello</p>
+          <p className="card__eyebrow">06 · Say hello</p>
           <h2 id="contact-title" className="contact__title">
             Let&rsquo;s talk <span className="spectrum-text">security.</span>
           </h2>

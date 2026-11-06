@@ -1,5 +1,6 @@
 import { profile } from "../../content/profile";
 import { NAV } from "../navItems";
+import { loadFeed, pct, shortDate, type FeedVuln } from "../../feed";
 
 export interface Out {
   text: string;
@@ -26,6 +27,8 @@ async function sha256(s: string) {
 }
 
 const sections = ["top", ...NAV.map((n) => n.id)];
+
+const row = (v: FeedVuln) => say(`  ${v.cve.padEnd(16)} ${pct(v.epss).padStart(6)}  ${v.vendor} ${v.product}`);
 
 export const commands: Record<string, Cmd> = {
   help: {
@@ -98,6 +101,24 @@ export const commands: Record<string, Cmd> = {
   },
   triage: { help: "open the alert triage lab", run: (_, ctx) => (ctx.tab("triage"), [say("→ triage", "ok")]) },
   replay: { help: "open the attack replay", run: (_, ctx) => (ctx.tab("replay"), [say("→ attack replay", "ok")]) },
+  intel: {
+    help: "today's threat digest (live)",
+    run: async (_, ctx) => {
+      try {
+        const f = await loadFeed();
+        ctx.goto("intel");
+        return [
+          say(`threat-feed · ${shortDate(f.date)} · ${f.total.toLocaleString()} vulns under active attack`, "accent"),
+          say(f.isNew ? "New in CISA KEV:" : "Most recent KEV additions:", "dim"),
+          ...f.latest.slice(0, 3).map(row),
+          say("Most likely to be exploited:", "dim"),
+          ...f.top.slice(0, 3).map(row),
+        ];
+      } catch {
+        return [say("intel: the live feed is unreachable right now", "err")];
+      }
+    },
+  },
   hash: {
     help: "SHA-256 of text — hash hello",
     run: async (args) => {
@@ -126,7 +147,8 @@ export const commands: Record<string, Cmd> = {
     run: () => [
       say("Cookies ........... none", "ok"),
       say("Analytics ......... none", "ok"),
-      say("Third-party calls . none (fonts are self-hosted)", "ok"),
+      say("Third-party calls . one: the Intel section loads a public JSON file from GitHub, no cookies sent", "ok"),
+      say("Fonts ............. self-hosted", "ok"),
       say("Forms ............. none; the labs run entirely in your browser", "ok"),
     ],
   },
