@@ -1711,3 +1711,9 @@
   border-radius: 50%;
   background: var(--live);
 }
+
+/* Brand green touches */
+.bar__nav a[aria-current="true"] .bar__num { color: var(--live); }
+.tl__bar[data-on="true"] .tl__bar-title::before { background: #0b0b0e; }
+.intel-chart__bar { fill: color-mix(in srgb, var(--live) 55%, var(--bg-2)); }
+.intel-chart__bar:hover { fill: var(--live); }

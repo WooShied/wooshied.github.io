@@ -8,9 +8,9 @@ import { useReducedMotion } from "../hooks/useReducedMotion";
 
 const LANE_ORDER: Lane[] = ["ops", "cyber", "lead"];
 const LANE_COLOR: Record<Lane, string> = {
-  ops: profile.layers[0].color, // physical yellow
-  cyber: profile.layers[1].color, // network cyan
-  lead: profile.layers[4].color, // data rose
+  ops: "#d6d6d6", // gray
+  cyber: "#5eea8f", // brand green: the main lane
+  lead: "#9c9c9c", // darker gray
 };
 
 const roles = profile.experience;

@@ -4,8 +4,8 @@
      live  · green  · running, active, contained, success
      warn  · amber  · medium risk, caution
      alert · red    · danger, compromise, ransomware, high risk
-   The five layer tokens are a gray ramp, kept so layers still
-   read as distinct steps without adding hues.                 */
+   Green is also the brand color. The five layer tokens are a
+   white-to-green ramp, so layers read as steps of one hue.    */
 
 :root {
   --bg: #0a0a0a;
@@ -24,13 +24,13 @@
   --alert: #ff5f56;
   --alert-rgb: 255, 95, 86;
 
-  --l-physical: #fafafa;
-  --l-network: #e2e2e2;
-  --l-identity: #cacaca;
-  --l-application: #b3b3b3;
-  --l-data: #9c9c9c;
-  --spectrum: linear-gradient(90deg, #fafafa, #a8a8a8);
-  --accent: var(--fg);
+  --l-physical: #e9fbef;
+  --l-network: #c2f5d4;
+  --l-identity: #97efb6;
+  --l-application: #6fe99b;
+  --l-data: #4fdc82;
+  --spectrum: linear-gradient(90deg, #f5f5f5 10%, var(--live));
+  --accent: var(--live);
   --ok: var(--live);
 
   --display: "Unbounded Variable", "Unbounded", system-ui, sans-serif;

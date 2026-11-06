@@ -58,7 +58,7 @@ export const profile: Profile = {
       id: "physical",
       name: "Physical",
       tagline: "Where security is visible.",
-      color: "#fafafa",
+      color: "#e9fbef",
       work: [
         "First operator on the graveyard shift during the GSOC's initial build-out",
         "Threat detection, incident response, and protective intelligence in 24/7 operations",
@@ -71,7 +71,7 @@ export const profile: Profile = {
       id: "network",
       name: "Network & platform",
       tagline: "Keep the ground floor patched and observable.",
-      color: "#e2e2e2",
+      color: "#c2f5d4",
       work: [
         "Security assessments across Google Drive, NextCloud, and Backupify",
         "Platform monitoring, patching, and support; Docker and Kubernetes",
@@ -84,7 +84,7 @@ export const profile: Profile = {
       id: "identity",
       name: "Identity & access",
       tagline: "Who gets in, and how we know.",
-      color: "#cacaca",
+      color: "#97efb6",
       work: [
         "Access control configuration across 5+ cloud platforms",
         "SAML and OAuth implementations",
@@ -97,7 +97,7 @@ export const profile: Profile = {
       id: "application",
       name: "Application",
       tagline: "Security written into the code.",
-      color: "#b3b3b3",
+      color: "#6fe99b",
       work: [
         "Secure application development and Spring Boot APIs",
         "Django and Flask backends; Express hardened with Helmet",
@@ -109,7 +109,7 @@ export const profile: Profile = {
       id: "data",
       name: "Data & people",
       tagline: "The asset at the center, and the people around it.",
-      color: "#9c9c9c",
+      color: "#4fdc82",
       work: [
         "Data protection protocols and secure authentication",
         "Phishing simulations and security awareness training",
@@ -278,11 +278,11 @@ export const profile: Profile = {
   // Tools used on the job (confirmed by Aadil 5 Nov 2026) plus the résumé's skills list.
   // Security-operations tools are deliberately not tied to an employer.
   toolbox: [
-    { title: "Security operations", color: "#fafafa", items: ["Splunk", "Dataminr", "AlertMedia", "Access control & CCTV platforms"] },
-    { title: "Security engineering", color: "#cacaca", items: ["SAML", "OAuth", "OWASP Dependency-Check", "Helmet", "PyCrypto / cryptography"] },
-    { title: "Languages", color: "#b3b3b3", items: ["Python", "Java", "JavaScript", "Node.js", "Dart", "Lua", "C / C++", "SQL", "HTML", "CSS"] },
-    { title: "Frameworks", color: "#e2e2e2", items: ["Flutter", "Django", "Flask", "Spring Boot", "Express", "Tailwind CSS", "Sass", "Pytest"] },
-    { title: "Data & DevOps", color: "#9c9c9c", items: ["MySQL", "Git & GitHub", "GitLab CI/CD", "Docker", "Kubernetes", "Terraform", "Jenkins API", "Fabric", "Google Workspace"] },
+    { title: "Security operations", color: "#5eea8f", items: ["Splunk", "Dataminr", "AlertMedia", "Access control & CCTV platforms"] },
+    { title: "Security engineering", color: "#97efb6", items: ["SAML", "OAuth", "OWASP Dependency-Check", "Helmet", "PyCrypto / cryptography"] },
+    { title: "Languages", color: "#6fe99b", items: ["Python", "Java", "JavaScript", "Node.js", "Dart", "Lua", "C / C++", "SQL", "HTML", "CSS"] },
+    { title: "Frameworks", color: "#c2f5d4", items: ["Flutter", "Django", "Flask", "Spring Boot", "Express", "Tailwind CSS", "Sass", "Pytest"] },
+    { title: "Data & DevOps", color: "#4fdc82", items: ["MySQL", "Git & GitHub", "GitLab CI/CD", "Docker", "Kubernetes", "Terraform", "Jenkins API", "Fabric", "Google Workspace"] },
   ],
 
   certifications: [
