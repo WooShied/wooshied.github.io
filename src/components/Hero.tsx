@@ -70,6 +70,7 @@ export function Hero() {
         <div className="card card--statement">
           <p className="statement">
             {hero.statement[0]} <span className="spectrum-text">{hero.statement[1]}</span>
+            <span className="cursor" aria-hidden="true" />
           </p>
           <p className="card__body">{hero.sub}</p>
         </div>

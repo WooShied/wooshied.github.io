@@ -8,9 +8,9 @@
   --ink-2: var(--fg-2);
   --rule: var(--line);
   --rule-strong: var(--line-2);
-  --signal: var(--l-identity);
-  --signal-ink: var(--l-identity);
-  --signal-wash: rgba(167, 139, 250, 0.1);
+  --signal: var(--fg);
+  --signal-ink: var(--fg);
+  --signal-wash: rgba(255, 255, 255, 0.06);
   --font-mono: var(--mono);
 }
 
@@ -266,7 +266,7 @@ fieldset:disabled.seg > label {
 }
 
 .sev--high {
-  color: var(--l-data);
+  color: var(--alert);
 }
 
 .sev--medium {

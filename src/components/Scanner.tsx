@@ -1,11 +1,13 @@
 import { useEffect, useRef } from "react";
 import { useReducedMotion } from "../hooks/useReducedMotion";
-import { profile } from "../content/profile";
+
+/** Matches --live in tokens.css (canvas can't read CSS variables). */
+const SIGNAL = "#5eea8f";
 
 /**
  * The name, with a scanner lens. Under the lens the letters switch to an
- * outlined version filled with the five layer colors, and nearby grid dots
- * light up. Follows the pointer; drifts on its own when idle (touch, keyboard).
+ * outlined version in the green "live" signal, and nearby grid dots
+ * light up like an active scan. Follows the pointer; drifts on its own when idle (touch, keyboard).
  * Decorative: the real heading text is always present and readable.
  */
 export function Scanner({ name }: { name: string }) {
@@ -14,7 +16,7 @@ export function Scanner({ name }: { name: string }) {
   const reduced = useReducedMotion();
   const [first, ...rest] = name.split(" ");
   const last = rest.join(" ");
-  const layerColors = profile.layers.map((l) => l.color);
+  const layerColors = [SIGNAL];
 
   useEffect(() => {
     const stack = stackRef.current;
@@ -22,7 +24,6 @@ export function Scanner({ name }: { name: string }) {
     if (!stack || !canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
-    const colors = profile.layers.map((l) => l.color);
 
     let w = 0;
     let h = 0;
@@ -63,12 +64,12 @@ export function Scanner({ name }: { name: string }) {
           const k = Math.max(0, 1 - d / R);
           if (k > 0) {
             ctx.globalAlpha = 0.12 + k * 0.5;
-            ctx.fillStyle = colors[Math.min(colors.length - 1, Math.floor((x / w) * colors.length))];
+            ctx.fillStyle = SIGNAL;
             const s = 1.2 + k * 1.8;
             ctx.fillRect(x - s / 2, y - s / 2, s, s);
           } else {
             ctx.globalAlpha = 0.12;
-            ctx.fillStyle = "#f4f4f5";
+            ctx.fillStyle = "#f5f5f5";
             ctx.fillRect(x - 0.6, y - 0.6, 1.2, 1.2);
           }
         }

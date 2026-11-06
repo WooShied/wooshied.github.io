@@ -113,11 +113,11 @@
 }
 
 .term__chrome i:nth-child(1) {
-  background: var(--l-data);
+  background: var(--alert);
 }
 
 .term__chrome i:nth-child(2) {
-  background: var(--l-physical);
+  background: var(--warn);
 }
 
 .term__chrome i:nth-child(3) {
@@ -153,11 +153,11 @@
 }
 
 .term__line[data-tone="err"] {
-  color: var(--l-data);
+  color: var(--alert);
 }
 
 .term__line[data-tone="accent"] {
-  color: var(--l-network);
+  color: var(--live);
 }
 
 .term__line[data-tone="cmd"] {
@@ -173,7 +173,7 @@
 
 .term__prompt {
   flex: none;
-  color: var(--l-identity);
+  color: var(--live);
 }
 
 .term__input input {
@@ -183,7 +183,7 @@
   background: transparent;
   color: var(--fg);
   font: inherit;
-  caret-color: var(--l-network);
+  caret-color: var(--live);
 }
 
 .term__input input:focus {
@@ -191,7 +191,7 @@
 }
 
 .term__input:focus-within {
-  box-shadow: 0 1px 0 var(--l-network);
+  box-shadow: 0 1px 0 var(--live);
 }
 
 .term__quick {
@@ -248,7 +248,7 @@
 }
 
 .ar__edge[data-on="true"] {
-  stroke: var(--l-data);
+  stroke: var(--alert);
   stroke-width: 2.5;
 }
 
@@ -258,7 +258,7 @@
 }
 
 .ar__packet {
-  fill: var(--l-data);
+  fill: var(--alert);
 }
 
 .ar__node rect {
@@ -287,24 +287,24 @@
 }
 
 .ar__node[data-state="soc"] rect {
-  stroke: var(--l-network);
-  fill: rgba(34, 211, 238, 0.08);
+  stroke: var(--live);
+  fill: rgba(var(--live-rgb), 0.07);
 }
 
 .ar__node[data-state="bad"] rect {
-  stroke: var(--l-data);
-  fill: rgba(251, 113, 133, 0.14);
-  filter: drop-shadow(0 0 10px rgba(251, 113, 133, 0.45));
+  stroke: var(--alert);
+  fill: rgba(var(--alert-rgb), 0.14);
+  filter: drop-shadow(0 0 10px rgba(var(--alert-rgb), 0.45));
 }
 
 .ar__node[data-state="bad"] .ar__node-sub {
-  fill: var(--l-data);
+  fill: var(--alert);
 }
 
 .ar__node[data-state="isolated"] rect {
   stroke: var(--ok);
   stroke-dasharray: 6 4;
-  fill: rgba(74, 222, 128, 0.06);
+  fill: rgba(var(--live-rgb), 0.06);
 }
 
 .ar__node[data-state="isolated"] .ar__node-sub {
@@ -312,7 +312,7 @@
 }
 
 .ar__ping {
-  fill: var(--l-data);
+  fill: var(--alert);
   animation: ar-ping 1.4s ease-out infinite;
   transform-box: fill-box;
   transform-origin: center;
@@ -347,7 +347,7 @@
 .ar__meter-fill {
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, var(--l-physical), var(--l-data));
+  background: linear-gradient(90deg, var(--warn), var(--alert));
   transition: width 0.6s var(--ease);
 }
 
@@ -383,8 +383,8 @@
 }
 
 .ar__step[aria-current="step"] {
-  border-color: color-mix(in srgb, var(--l-data) 50%, transparent);
-  background: rgba(251, 113, 133, 0.08);
+  border-color: color-mix(in srgb, var(--alert) 50%, transparent);
+  background: rgba(var(--alert-rgb), 0.08);
   opacity: 1;
 }
 
@@ -405,7 +405,7 @@
 }
 
 .ar__step[aria-current="step"] .ar__step-num {
-  background: var(--l-data);
+  background: var(--alert);
   color: #1a0a0e;
 }
 
@@ -435,7 +435,7 @@
 }
 
 .ar__outcome.is-lost {
-  border-left: 4px solid var(--l-data);
+  border-left: 4px solid var(--alert);
 }
 
 .ar__kicker {

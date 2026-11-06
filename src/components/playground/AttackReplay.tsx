@@ -5,7 +5,7 @@ import { useReducedMotion } from "../../hooks/useReducedMotion";
 const W = 150;
 const H = 58;
 const byId = Object.fromEntries(nodes.map((n) => [n.id, n])) as Record<NodeId, (typeof nodes)[number]>;
-const SEV: Record<string, string> = { Low: "#8f8f9b", Medium: "#fbbf24", High: "#fb7185" };
+const SEV: Record<string, string> = { Low: "#8f8f8f", Medium: "#f5c04a", High: "#ff5f56" };
 
 /** Polyline through node centers, for traffic animation. */
 const pathD = (ids: NodeId[]) =>

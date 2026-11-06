@@ -31,9 +31,9 @@ body::before {
   height: 70vh;
   z-index: -1;
   pointer-events: none;
-  background: radial-gradient(40% 60% at 20% 0%, rgba(250, 204, 21, 0.07), transparent 70%),
-    radial-gradient(40% 60% at 55% 0%, rgba(167, 139, 250, 0.09), transparent 70%),
-    radial-gradient(40% 60% at 90% 0%, rgba(34, 211, 238, 0.08), transparent 70%);
+  background: radial-gradient(40% 60% at 20% 0%, rgba(255, 255, 255, 0.035), transparent 70%),
+    radial-gradient(40% 60% at 55% 0%, rgba(255, 255, 255, 0.04), transparent 70%),
+    radial-gradient(40% 60% at 90% 0%, rgba(var(--live-rgb), 0.025), transparent 70%);
 }
 
 img,
@@ -84,8 +84,8 @@ button {
 }
 
 ::selection {
-  background: var(--l-identity);
-  color: #09090b;
+  background: var(--fg);
+  color: var(--bg);
 }
 
 .wrap {
