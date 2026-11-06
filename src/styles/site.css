@@ -1717,3 +1717,10 @@
 .tl__bar[data-on="true"] .tl__bar-title::before { background: #0b0b0e; }
 .intel-chart__bar { fill: color-mix(in srgb, var(--live) 55%, var(--bg-2)); }
 .intel-chart__bar:hover { fill: var(--live); }
+/* The selected role is always brand green, whatever its lane color. */
+.tl__bar[data-on="true"] {
+  background: var(--live);
+  border-color: var(--live);
+  color: #06210f;
+  box-shadow: 0 0 28px rgba(var(--live-rgb), 0.4);
+}

@@ -34,10 +34,12 @@ function laneRows(lane: Lane): Role[][] {
   return rows;
 }
 
+/** Whatever role is selected lights up in the brand color, whichever lane it sits in. */
+const SELECTED = "#5eea8f";
+
 function Detail({ role }: { role: Role }) {
-  const color = LANE_COLOR[role.lane];
   return (
-    <article className="tl-detail" style={{ ["--c" as string]: color }} aria-live="polite">
+    <article className="tl-detail" style={{ ["--c" as string]: SELECTED }} aria-live="polite">
       <p className="tl-detail__when">
         {role.start} — {role.end}
         <span> · {profile.lanes[role.lane]}</span>
@@ -172,7 +174,7 @@ export function Timeline() {
         {mobile ? (
           <ol className="tl-list">
             {[...chrono].reverse().map((r) => (
-              <li key={r.id} style={{ ["--c" as string]: LANE_COLOR[r.lane] }}>
+              <li key={r.id} style={{ ["--c" as string]: selected === r.id ? SELECTED : LANE_COLOR[r.lane] }}>
                 <button
                   type="button"
                   className="tl-list__btn"
